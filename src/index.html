@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuestHub</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="welcome" class="welcome">
+    <div class="welcome-card">
+      <div class="brand-mark">Q</div>
+      <p class="eyebrow">OYUN TAKİP MERKEZİ</p>
+      <h1>QuestHub</h1>
+      <p class="muted">Oyun kütüphanen tek yerde.</p>
+      <div class="warning">
+        <strong>ÖNEMLİ UYARI</strong>
+        <p>Discord veya oyun platformlarının kurallarını ihlal eden kullanım hesap kısıtlamalarına yol açabilir. QuestHub görevleri tamamlanmış gibi göstermez ve Discord'a sahte etkinlik bildirimi göndermez. Hesabınızla ilgili yaptırımlardan kaçınmak için ilgili platformların kurallarına uyun.</p>
+      </div>
+      <button id="enter-button" class="primary">Devam et</button>
+    </div>
+  </div>
+
+  <main class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark small">Q</span><span>QuestHub</span></div>
+      <nav>
+        <button class="nav-item active" data-view="games">▦ <span>Oyunlar</span></button>
+        <button class="nav-item" data-view="quests">◎ <span>Görev takibi</span></button>
+        <button class="nav-item" data-view="about">ⓘ <span>Hakkında</span></button>
+      </nav>
+      <div class="sidebar-foot">Sürüm 0.1.0 · Türkçe</div>
+    </aside>
+
+    <section class="content">
+      <header class="topbar">
+        <div><p class="eyebrow">KÜTÜPHANEN</p><h2 id="page-title">Oyunlar</h2></div>
+        <label class="search"><span>⌕</span><input id="search-input" type="search" placeholder="Oyun veya görev ara..." autocomplete="off"></label>
+      </header>
+
+      <section id="games-view" class="view">
+        <div class="section-heading"><div><h3>Oyun kütüphanesi</h3><p class="muted">Bilgisayarında çalışan desteklenen oyunlar.</p></div><button id="refresh-button" class="secondary">↻ Yenile</button></div>
+        <div id="game-grid" class="game-grid"><div class="empty">Oyunlar yükleniyor...</div></div>
+        <p class="footnote">Not: Bu ilk sürüm çalışan süreçleri algılar; mağaza hesaplarına giriş yapmaz ve oyun başlatmaz.</p>
+      </section>
+
+      <section id="quests-view" class="view hidden">
+        <div class="section-heading"><div><h3>Görev takibi</h3><p class="muted">Discord Quest koşullarını ve gerçek ilerlemeni kendin takip et.</p></div></div>
+        <div class="panel">
+          <div class="panel-icon">◎</div><div><strong>Görevler manuel takip edilir</strong><p class="muted">Görev ayrıntılarını Discord'da kontrol et. QuestHub süreyi hızlandırmaz, sahte oyun etkinliği oluşturmaz veya ödül talep etmez.</p></div>
+        </div>
+        <div class="task-form"><input id="task-input" type="text" maxlength="100" placeholder="Görev adını yaz..."><button id="add-task" class="primary">Görev ekle</button></div>
+        <div id="task-list" class="task-list"><div class="empty">Henüz görev eklemedin.</div></div>
+      </section>
+
+      <section id="about-view" class="view hidden">
+        <div class="panel about-panel"><div class="brand-mark">Q</div><div><h3>QuestHub 0.1.0</h3><p class="muted">Windows 10 ve Windows 11 için Türkçe oyun takip uygulaması.</p><p class="muted">Açık kaynak proje. Bu ön sürüm Steam, Epic Games ve Riot Games oyunlarından seçili çalışan süreçleri algılar. Discord entegrasyonu ve mağaza kütüphanesi taraması henüz eklenmemiştir.</p></div></div>
+      </section>
+      <footer>QuestHub · Hesap güvenliğin için platform kurallarına uy.</footer>
+    </section>
+  </main>
+  <script src="renderer.js"></script>
+</body>
+</html>
