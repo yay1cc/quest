@@ -7,14 +7,37 @@ QuestHub, Windows 10 ve Windows 11 (64-bit) için geliştirilen Türkçe masaüs
 - Türkçe, koyu temalı masaüstü arayüzü
 - Üst bölümde oyun/görev arama alanı
 - Steam, Epic Games ve Riot Games ile ilişkilendirilen seçili oyunların çalışan süreçlerini algılama
+- Rockstar Games'in PC sürümleri için oyun kataloğu
+- Rockstar oyunları için Windows kayıt defteri ve yaygın Rockstar Games kurulum klasörlerinde otomatik kurulum taraması
+- Rockstar oyunlarında kurulu ve çalışıyor durumlarını ayrı gösterme
 - Discord Quest görevleri için manuel kontrol listesi
 - Electron güvenlik ayarları: context isolation açık, Node entegrasyonu kapalı, sandbox açık
+
+## Rockstar PC oyun kataloğu
+
+- Grand Theft Auto III
+- Grand Theft Auto: Vice City
+- Grand Theft Auto: San Andreas
+- Grand Theft Auto IV
+- Grand Theft Auto V
+- Red Dead Redemption
+- Red Dead Redemption 2
+- L.A. Noire
+- Max Payne
+- Max Payne 2: The Fall of Max Payne
+- Max Payne 3
+- Bully: Scholarship Edition
+- Manhunt
+- Manhunt 2
+- Midnight Club II
+
+PC sürümü bulunmayan konsol oyunları kataloğa eklenmemiştir. Süreç adları ve klasör adları sürüm/mağazaya göre değişebildiğinden bazı oyunların çalışma veya kurulum durumu algılanamayabilir.
 
 ## Önemli sınırlar
 
 QuestHub Discord'a sahte oyun etkinliği veya sahte Quest ilerlemesi göndermez; görevleri otomatik tamamlamaz ve ödül talep etmez. Görevlerin gerçek koşullarını Discord uygulamasından kontrol edin.
 
-Bu ilk ön sürüm mağaza hesaplarına bağlanmaz, kurulu oyun kütüphanelerini tam olarak taramaz ve Discord Rich Presence entegrasyonu içermez. Oyun algılama, bilinen süreç adları üzerinden yapılır; bu nedenle tüm oyunlar garanti edilmez.
+Rockstar kurulum taraması Windows kayıt defterindeki Rockstar Games kayıtlarını ve yaygın Rockstar Games kurulum dizinlerini kontrol eder. Bu yöntem tüm özel Steam/Epic kitaplıklarını veya taşınmış oyun klasörlerini garantiyle bulmaz. Diğer mağazalardaki oyunlar için bu sürüm ağırlıklı olarak çalışan süreç algılaması yapar. Mağaza hesaplarına bağlanmaz ve oyun başlatmaz.
 
 ## Geliştirme
 
