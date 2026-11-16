@@ -1,0 +1,28 @@
+name: Windows build
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Depoyu indir
+        uses: actions/checkout@v4
+      - name: Node.js kur
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - name: Bağımlılıkları kur
+        run: npm install
+      - name: Windows kurulum dosyasını oluştur
+        run: npm run dist
+      - name: Kurulum dosyasını yükle
+        uses: actions/upload-artifact@v4
+        with:
+          name: QuestHub-Windows-Installer
+          path: dist/*.exe
+          if-no-files-found: error
