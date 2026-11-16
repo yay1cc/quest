@@ -71,7 +71,6 @@ function getSearchRoots() {
     const base = process.env[envName];
     if (!base) continue;
     roots.add(path.join(base, 'Rockstar Games'));
-    roots.add(path.join(base, 'Rockstar Games', 'Launcher'));
   }
   for (const drive of ['C:', 'D:', 'E:', 'F:']) {
     roots.add(path.join(drive, 'Program Files', 'Rockstar Games'));
@@ -91,7 +90,6 @@ async function getGames() {
   const catalog = GAME_CATALOG.map((game) => ({ ...game, installed: false, installPath: null }));
   const rockstarGames = catalog.filter((game) => game.folders);
 
-  // Launcher registry entries are checked first; game folders are then checked in common install locations.
   for (const game of rockstarGames) {
     const folderNames = game.folders.map((name) => name.toLowerCase());
     const registryMatch = registryPaths.find((candidate) =>
@@ -120,6 +118,7 @@ async function getGames() {
     store: game.store,
     running: game.process.some((name) => running.includes(name)),
     installed: game.installed,
+    installTracked: Boolean(game.folders),
     installPath: game.installPath
   }));
 }
