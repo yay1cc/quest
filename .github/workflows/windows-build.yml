@@ -15,7 +15,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
       - name: Bağımlılıkları kur
         run: npm install
       - name: Windows kurulum dosyasını oluştur
