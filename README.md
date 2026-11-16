@@ -20,6 +20,7 @@ QuestHub, Windows 10 ve Windows 11 (64-bit) için geliştirilen Türkçe masaüs
 - Grand Theft Auto: San Andreas
 - Grand Theft Auto IV
 - Grand Theft Auto V
+- Grand Theft Auto: The Trilogy – The Definitive Edition
 - Red Dead Redemption
 - Red Dead Redemption 2
 - L.A. Noire
