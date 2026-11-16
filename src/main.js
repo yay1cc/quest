@@ -14,6 +14,7 @@ const GAME_CATALOG = [
 
   // Rockstar Games: Windows/PC releases only.
   { name: 'Grand Theft Auto V', process: ['gta5.exe', 'gta5_enhanced.exe'], folders: ['Grand Theft Auto V'], store: 'Rockstar / Steam / Epic' },
+  { name: 'Grand Theft Auto: The Trilogy – The Definitive Edition', process: ['gta3.exe', 'vicecity.exe', 'sanandreas.exe'], folders: ['Grand Theft Auto The Trilogy The Definitive Edition', 'Grand Theft Auto The Trilogy'], store: 'Rockstar / Steam / Epic' },
   { name: 'Grand Theft Auto IV', process: ['gtaiv.exe'], folders: ['Grand Theft Auto IV'], store: 'Rockstar / Steam' },
   { name: 'Grand Theft Auto III', process: ['gta3.exe'], folders: ['GTAIII', 'Grand Theft Auto III'], store: 'Rockstar / Steam' },
   { name: 'Grand Theft Auto: Vice City', process: ['gta-vc.exe'], folders: ['Grand Theft Auto Vice City', 'GTA Vice City'], store: 'Rockstar / Steam' },
