@@ -1,0 +1,30 @@
+{
+  "name": "questhub",
+  "version": "0.1.0",
+  "description": "QuestHub - Türkçe oyun kütüphanesi ve Discord Quest takip yardımcısı",
+  "main": "src/main.js",
+  "author": "yay1cc",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win nsis"
+  },
+  "devDependencies": {
+    "electron": "^39.0.0",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "tr.questhub.desktop",
+    "productName": "QuestHub",
+    "asar": true,
+    "directories": { "output": "dist" },
+    "files": ["src/**/*", "package.json"],
+    "win": { "target": ["nsis"], "artifactName": "QuestHub-${version}-Windows-Setup.${ext}" },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  }
+}
