@@ -30,6 +30,13 @@ function renderGames() {
     store.className = 'store';
     store.textContent = game.store;
     card.append(top, title, store);
+
+    if (game.installTracked) {
+      const install = document.createElement('div');
+      install.className = 'install-status' + (game.installed ? ' installed' : '');
+      install.textContent = game.installed ? '✓ Bilgisayarda kurulu' : 'Kurulu olarak bulunamadı';
+      card.append(install);
+    }
     $('game-grid').append(card);
   });
 }
